@@ -157,7 +157,7 @@ namespace Kentico.KInspector.Modules
 
                 var documents = dbService.ExecuteAndGetTableFromFile("PageTemplatesOverviewModule-Documents.sql", 
                     new SqlParameter("PageTemplateID", template["PageTemplateID"]));
-                documents.TableName = $"{tableHeader} - Documents";
+                documents.TableName = $"{template["PageTemplateDisplayName"]} usage by site";
                 results.Tables.Add(documents.Copy());
             }
 

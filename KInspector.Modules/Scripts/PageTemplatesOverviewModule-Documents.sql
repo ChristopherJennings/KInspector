@@ -1,4 +1,4 @@
-﻿SELECT S.SiteName, DocumentCulture, Count(*)
+﻿SELECT S.SiteName, DocumentCulture, Count(*) as DocumentCount
 FROM View_CMS_Tree_Joined AS V
 INNER JOIN CMS_Site AS S on S.SiteID = V.NodeSiteID
 WHERE DocumentPageTemplateID = @PageTemplateID 
